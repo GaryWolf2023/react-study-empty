@@ -1,0 +1,22 @@
+
+
+.normal {
+    padding: 10px 15px;
+    border: 2px solid #dcdfe6;
+    border-radius: 4px;
+    color: #606266;
+    background-color: #fff;
+    margin: 10px 0 0;
+    &:hover {
+        background-color: #66b1ff;
+        border-color: #66b1ff;
+    }
+    &:active {
+        background-color: #fdb447;
+        border-color: #fdb447;
+    }
+}
+.is-check {
+    background-color: rgba(248, 252, 42, 0.712);
+    color: #000;
+}

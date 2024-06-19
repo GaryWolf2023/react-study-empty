@@ -1,0 +1,31 @@
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.box-all {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.common-style {
+  height: 400px;
+  width: calc(50% - 20px);
+  padding: 10px;
+}
+.top-left {
+background-color: #e27d7d62;
+}
+.top-right {
+background-color: #8ec77d71;
+}
+.bottom-left {
+  background-color: #5599a585;
+}
+.bottom-right {
+  background-color: #96883a80;
+}
