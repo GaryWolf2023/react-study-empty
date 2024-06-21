@@ -5,5 +5,5 @@ export const login = (data: any) => {
 }
 
 export const getCaptcha = () => {
-    return http({method:'get', url:'/user/captcha'})
+    return http({method:'get', url:'/public/user/captcha'})
 }

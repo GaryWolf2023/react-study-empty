@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import {useTranslation} from 'react-i18next'
 
 import SvgCaptcha from './components/svgCaptcha.tsx';
-// import { login } from '@/api/user.ts';
 import './login.scss';
 import classNames from 'classnames';
 import Locale from '@/common/componnets/i18n/changeLocal.tsx';
@@ -22,7 +21,7 @@ const Login: React.FC = memo(() => {
     const {t} = useTranslation();
     const params = useParams();
     console.log(params);
-    const [loginLoading, setLoginLoading] = useState<any>(false);
+    const [loginLoading, setLoginLoading] = useState<any>(false); // 登陆动画
     const [formData, setFormData] = useState<LoginType>({
         username: '',
         password: '',
@@ -43,21 +42,21 @@ const Login: React.FC = memo(() => {
             setLoginLoading(false);
             clearTimeout(timer)
             // navigate('/home');
-        })
+        }, 3000)
         // login({}).then((res:any) => {
         //     console.log(res);
         // })
     }
     return (
-        <div className={`h-full w-full relative login`}>
+        <div className={`h-full w-full relative login overflow-hidden`}>
             <Locale top={'40px'} right={'50px'} />
-            <div className={classNames('left-box overflow-hidden grid grid-cols-1', loginLoading?'mr-[100px]':'')}>
+            <div className={classNames('left-box overflow-hidden grid grid-cols-1', loginLoading?'left-[-60px] transition duration-700 ease-in-out':'')}>
                 <img
                     className={`w-full h-full`}
                     src="https://copyright.bdstatic.com/vcg/creative/1434d89b9eca5356a80fc06124ef6c50.jpg@h_1280" alt=""
                 />
             </div>
-            <div className={classNames('right-box overflow-hidden grid grid-cols-1', loginLoading?'ml-[100px]':'')}>
+            <div className={classNames('right-box overflow-hidden grid grid-cols-1', loginLoading?'right-[-60px] transition duration-700 ease-in-out':'')}>
                 <img
                     className={`w-full h-full`}
                     src="https://p2.itc.cn/images01/20230706/d244f2647c7643cb9eb5be8fa95bcbfb.jpeg" alt=""
@@ -114,6 +113,16 @@ const Login: React.FC = memo(() => {
                 <Form.Item<LoginType>
                     label={t('login.验证码')}
                     name="captcha"
+                    rules={[
+                        { required: true, message: t('login.请输入密码') },
+                        {
+                            validator: (_, value) => {
+                                if (value && value.length === 6) {
+
+                                }
+                            }
+                        }
+                    ]}
                 >
                     <Space.Compact style={{ width: '100%' }}>
                         <Input
