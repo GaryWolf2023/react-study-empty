@@ -1,0 +1,17 @@
+.top-nav {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    align-items: flex-end;
+    .nav-item {
+        font-size: 1.2rem;
+        margin: 0 .8rem;
+        padding: 0 .8rem;
+        cursor: pointer;
+        margin-bottom: .8rem;
+        &:hover {
+            // background: linear-gradient(to top, rgba(89, 167, 255, 0.466) 0%, rgba(255, 255, 255, 0.05) 80%);
+            border-bottom: 1px solid rgba(89, 167, 255, 0.466);
+        }
+    }
+}

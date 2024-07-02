@@ -1,0 +1,44 @@
+{
+  "id": "4607260",
+  "name": "react-study-2024",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5482996",
+      "name": "笔记",
+      "font_class": "biji",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "12008284",
+      "name": "混合原油的实沸点蒸馏窄馏分性质",
+      "font_class": "hunheyuanyoudeshifeidianzhengliuzhailiufenxingzhi",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "23949513",
+      "name": "文章",
+      "font_class": "wenzhang",
+      "unicode": "ec64",
+      "unicode_decimal": 60516
+    },
+    {
+      "icon_id": "39668680",
+      "name": "代码",
+      "font_class": "daima",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "40870806",
+      "name": "草稿便签编辑",
+      "font_class": "a-appround41",
+      "unicode": "e940",
+      "unicode_decimal": 59712
+    }
+  ]
+}

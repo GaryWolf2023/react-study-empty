@@ -1,0 +1,75 @@
+.creator-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 1rem;
+    position: relative;
+    .creator-center-content {
+        width: 400px;
+        border-radius: .5rem;
+        background: #fff;
+        border: 1px solid rgba(0,0,0, .3);
+        position: absolute;
+        right: 0;
+        top: 4.3rem;
+        z-index: 999;
+        .tag-box {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0,0,0, .3);
+            margin: 0 1rem;
+            .tag-item {
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: .8rem;
+                color: #000;
+                cursor: pointer;
+                border-radius: .5rem;
+                &:hover {
+                    color: rgb(255, 110, 27);
+                    background-color: rgba(143, 143, 143, 0.459);
+                }
+            }
+        }
+        .hot-msg {
+            min-height: 80px;
+        }
+        // 费了很大劲做了个三角，原理就是使用为元素并用两个三角形重叠显示边框
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-top-width: 0;
+            border-right-width: 8px;
+            border-left-width: 8px;
+            border-bottom-width: 16px;
+            border-color: rgba(0,0,0,0);
+            border-bottom-color: rgba(0,0,0, .3);
+            right: 20px;
+            top: -16px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-top-width: 0;
+            border-right-width: 8px;
+            border-left-width: 8px;
+            border-bottom-width: 16px;
+            border-color: rgba(0,0,0,0);
+            border-bottom-color: rgb(255, 255, 255);
+            right: 20px;
+            top: -14px;
+        }
+    }
+}

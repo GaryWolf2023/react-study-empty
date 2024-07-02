@@ -4,19 +4,29 @@ type Props = {
     children: ReactNode
 }
 
-// 高阶组件
-
+/**
+ * 开发中暂时关闭路由守卫,这个是全局路由首位
+ * 思考一下如何才能实现组件路由首位
+ * @param props 
+ * @returns 
+ */
 const RouterGruard: FC<Props> = (props:any) => {
     // 路由守卫
     console.log(!!localStorage.getItem('token'));
     const token: String|null = localStorage.getItem('token')
-    if (!token) {
-        console.log('有权限--->直接跳转');
-       return <>{ props.children }</>
-    } else {
-        console.log('无权限--->重定向');
-        return <Navigate to='/login'></Navigate>
-    }
+
+    /**
+     * @description 路由守卫
+     */
+
+    // if (!token) {
+    //     console.log('有权限--->直接跳转');
+    //    return <>{ props.children }</>
+    // } else {
+    //     console.log('无权限--->重定向');
+    //     return <Navigate to='/login'></Navigate>
+    // }
+    return <>{ props.children }</>
 }
 
 export default RouterGruard
