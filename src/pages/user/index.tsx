@@ -34,6 +34,7 @@ const User = () => {
         <div className='user'>
             <div className={'user-title'}>
                 <span>用户页</span>
+                {actionName}
                 <Button type="primary" onClick={() => dispatch(setSettingDrawer(true))}>发送请求</Button>
             </div>  
             <div className={'user-content'}>

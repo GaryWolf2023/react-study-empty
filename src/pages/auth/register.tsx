@@ -1,10 +1,12 @@
 // import { useEffect } from "react";
-import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {Link, useNavigate, useParams, useSearchParams} from "react-router-dom";
 
-const Register = () => {
+const Register = (props: any) => {
+    console.log(props)
     const navigate = useNavigate();
-    const [params] = useSearchParams();
-    const name = params.get('name');
+    const [searchParams] = useSearchParams();
+    useParams()
+    const name = searchParams.get('name');
     console.log('searchParams传参\n接收到参数:', name);
     return (
         <div>

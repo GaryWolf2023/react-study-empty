@@ -1,0 +1,10 @@
+.header-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  section {
+    height: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+@import "@/style/app.color.scss";
+
+.home-box {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: $bg-color;
+  position: relative;
+  .home-left {
+    background-color: $list-bg-color;
+    margin-top: 10px;
+  }
+  .home-main {
+    background-color: $list-bg-color;
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    border-right: 1px solid rgba(0,0,0, .2);
+    border-left: 1px solid rgba(0,0,0, .2);
+  }
+  .home-right {
+    background-color: $list-bg-color;
+    margin-top: 10px;
+  }
+}

@@ -1,13 +1,12 @@
 import '@/style/App.css'
-import { BrowserRouter } from 'react-router-dom'
-import DynamicRouter from '@/router/dynamicRouter';
 import SetTheme from '@/common/componnets/theme/index.tsx';
 import ChangeLang from '@/common/componnets/i18n/changeLang.tsx';
 
-import { Suspense, memo } from 'react'
-import Loading from './common/componnets/loading';
-
+import { memo } from 'react'
+// import Loading from './common/componnets/loading';
+// 国际化
 import '@/common/componnets/i18n/index.ts'
+import ManageRouter from './router/manageRouter';
 
 const App = memo(() => {
     return (
@@ -15,11 +14,7 @@ const App = memo(() => {
             <SetTheme>
                 {/* <RouterProvider router={router} /> */}
                 <ChangeLang />
-                    <Suspense fallback={<Loading />}>
-                        <BrowserRouter>
-                            <DynamicRouter></DynamicRouter>
-                        </BrowserRouter>
-                    </Suspense>
+                <ManageRouter></ManageRouter>
             </SetTheme>
         </div>
     )

@@ -1,0 +1,42 @@
+@import "@/style/app.color.scss";
+
+.list-box {
+  width: 100%;
+  .list-item-box {
+    width: calc(100% - 20px);
+    margin: 3px 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0, .1);
+    border-radius: 10px;
+    &:hover {
+      background-color: rgba(0,0,0, .1);
+      .title-box {
+        color: $text-hover-color;
+      }
+    }
+      .title-box {
+        width: 800px;
+        font-size: 1.2rem;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+      }
+      .title-description {
+        padding: 5px 0 15px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .bottom-box {
+        .tag-box {
+          .tag-item {
+            height: 100%;
+            padding: 2px 10px;
+            border: 1px solid rgba(0,0,0, .4);
+            margin: 0 4px;
+            border-radius: 3px;
+          }
+        }
+      }
+  }
+}
